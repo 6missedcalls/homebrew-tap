@@ -5,21 +5,21 @@
 class KalshiCli < Formula
   desc "CLI for the Kalshi prediction market exchange"
   homepage "https://github.com/6missedcalls/kalshi-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/6missedcalls/kalshi-cli/releases/download/v0.1.0/kalshi-cli_0.1.0_darwin_amd64.tar.gz"
-      sha256 "8fc53afb40f56c14f19f9350b5d8fb95ac0cd1fb59b57be449e9cd2edf827d41"
+      url "https://github.com/6missedcalls/kalshi-cli/releases/download/v0.1.1/kalshi-cli_0.1.1_darwin_amd64.tar.gz"
+      sha256 "2a7259d5bf78b8b12bf91175b9e543b1fa2d8281cbeec7d0ee4e3451d25a10ba"
 
       def install
         bin.install "kalshi-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/6missedcalls/kalshi-cli/releases/download/v0.1.0/kalshi-cli_0.1.0_darwin_arm64.tar.gz"
-      sha256 "6a5b60265fe0e71a4a4dcf306696aa3de0706283ebf7995aed972667f5f1aecc"
+      url "https://github.com/6missedcalls/kalshi-cli/releases/download/v0.1.1/kalshi-cli_0.1.1_darwin_arm64.tar.gz"
+      sha256 "f5a6431eaa8124e583671472ea209c66e45221cc3a98e1470052a65f663b294d"
 
       def install
         bin.install "kalshi-cli"
@@ -29,15 +29,15 @@ class KalshiCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/6missedcalls/kalshi-cli/releases/download/v0.1.0/kalshi-cli_0.1.0_linux_amd64.tar.gz"
-      sha256 "1c67240757e3629db4dcf15f242f87d58ed5c18ff8ee1bb97b80df0d737eead7"
+      url "https://github.com/6missedcalls/kalshi-cli/releases/download/v0.1.1/kalshi-cli_0.1.1_linux_amd64.tar.gz"
+      sha256 "f6d81d6c1c25944a091af66c641fa2be846715bec8c749aef17142e363c676ee"
       def install
         bin.install "kalshi-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/6missedcalls/kalshi-cli/releases/download/v0.1.0/kalshi-cli_0.1.0_linux_arm64.tar.gz"
-      sha256 "37b2daa78bcc299a25bdc44e2f086d88c96e265b909bd69082e20dfc037b6ade"
+      url "https://github.com/6missedcalls/kalshi-cli/releases/download/v0.1.1/kalshi-cli_0.1.1_linux_arm64.tar.gz"
+      sha256 "ac6eab81bd9b618356d4056d934f6bba20529becbcd7f9add1cfc4bcf7531407"
       def install
         bin.install "kalshi-cli"
       end
@@ -45,6 +45,6 @@ class KalshiCli < Formula
   end
 
   test do
-    system "#{bin}/kalshi-cli", "--help"
+    system "#{bin}/kalshi-cli", "version"
   end
 end
